@@ -21,7 +21,7 @@
   },
   "pnpm": {
     "overrides": {
-      "@mastra/client-js": "link:../../client-sdks/client-js"
+      "@mastra/client-js": "0.10.7"
     }
   },
   "devDependencies": {
