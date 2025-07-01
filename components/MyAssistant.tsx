@@ -6,11 +6,23 @@ const MarkdownText = makeMarkdownText();
 
 export function MyAssistant() {
   return (
-    <Thread
-      strings={{
-        welcome: { message: "Ask me questions about Peaka Sample Data" },
-      }}
-      assistantMessage={{ components: { Text: MarkdownText } }}
-    />
+    <>
+      <Thread
+        welcome={{
+          message: "Ask me questions about Peaka Sample Data",
+          suggestions: [
+            {
+              prompt: "List me top 10 opportunities from crm.",
+              text: "List me top 10 opportunities from crm.",
+            },
+            {
+              prompt: "List me top 10 actors from database.",
+              text: "List me top 10 actors from database.",
+            },
+          ],
+        }}
+        assistantMessage={{ components: { Text: MarkdownText } }}
+      />
+    </>
   );
 }
